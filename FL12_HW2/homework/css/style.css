@@ -13,7 +13,7 @@
         transform:  translateX(10)
     } */
 
-    h2.tm-section-title:hover{
+    h2.tm-section-title-box:hover{
         background-color: lightgrey;
         color: lightskyblue; 
     }
