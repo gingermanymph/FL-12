@@ -18,6 +18,47 @@
         color: lightskyblue; 
     }
 
+    div.padding-medium h2 {
+        color: lightskyblue;
+        text-align: center;
+    }
+
+    div.padding-medium li {
+        list-style-type: lower-alpha;
+    }
+
+    div.padding-medium li:hover::before {
+        content: ">";
+        font-weight: bold;
+        position: relative;
+    }
+    
+    div.padding-medium li:first-child::after,
+    div.padding-medium li:nth-child(3)::after {
+    /* a.text::after { */
+        /* position: relative; */
+        /* top: -6px; */
+        font-weight: bold;
+        padding: 2px;
+        font-size: 10px;
+        vertical-align: super; 
+        color: red;
+        content: "New";
+    }
+
+    div.padding-medium h2 {
+        text-align: left;
+    }
+
+    div.padding-medium p {
+        text-indent: 20px;
+    }
+
+    div.padding-medium p:last-child {
+        letter-spacing: 5px;
+        word-spacing: 10px;
+        font-style: italic;
+    }
 
 }
 
