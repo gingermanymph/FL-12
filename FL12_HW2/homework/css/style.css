@@ -110,7 +110,6 @@
         font-weight: bold;
     }
 
-/*  */
     #contact input {
         border-color: lightskyblue;
         border-top: 0;
@@ -123,7 +122,6 @@
     }
     #contact_message {
         display: block;
-        /* position: relative; */
         border-color: lightskyblue;
     }
 
