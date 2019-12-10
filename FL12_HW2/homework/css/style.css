@@ -96,7 +96,6 @@ section.heading li:hover::before {
 
 .box-work p {
     font-style: italic;
-    font-size: small;
 }
 
 .box-work p::first-letter {
@@ -224,5 +223,3 @@ section::before {
         margin-bottom: 10px;
     }
 }
-
-;
