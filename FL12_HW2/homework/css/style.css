@@ -13,6 +13,11 @@
         transform:  translateX(10)
     } */
 
+    h2.tm-section-title:hover{
+        background-color: lightgrey;
+        color: lightskyblue; 
+    }
+
 
 }
 
