@@ -1,5 +1,21 @@
-/*
+@media screen{
 
-write your code here
+    a.tm-nav-item-link:hover {
+        background-color: lightskyblue;
+        color: #fff;
+    }
 
-*/
+    p.tm-banner-text {
+        text-shadow: 4px 4px 2px #333;
+    }
+
+    /* p.tm-banner-text{
+        transform:  translateX(10)
+    } */
+
+
+}
+
+@media print{
+
+}
