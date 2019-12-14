@@ -1,1 +1,289 @@
 // Write your styles here
+// Mixins
+
+@mixin clear{
+    margin: 0;
+    padding: 0;
+}
+
+@mixin view_port{
+    margin: 0 auto;
+    max-width: $main-content-size;
+    width: 100%;
+}
+
+@mixin btn_link($f-size, $color){
+    // font-family: $f-style;
+    font-size: $f-size;
+    color: $color;
+}
+
+@mixin links($f-size, $f-color){
+    font-size: $f-size;
+    color: $f-color;
+}
+
+@mixin buttons($f-size, $f-color, $b-color, $width, $height){
+    font-size: $f-size;
+    color: $f-color;
+    border: 0;
+    border-radius: 3px;
+    background: $b-color;
+    width: $width;
+    height: $height;
+    font-weight: 600;
+}
+
+@mixin before_bg($top, $left, $height, $width){
+    content:"";
+    position:absolute;
+    top: $top;
+    left: $left;
+    background: $aqua-color;
+    height: $height;
+    width: $width;
+    z-index: -1;
+}
+
+
+html, body {
+    @include clear;
+    font-family: $font-family-hind;
+    color: $primary-text-color;
+}
+
+p {
+    @include clear;
+}
+
+
+.header{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    position: relative;
+    width: 100%;
+    height: $header-height;
+
+    background: url('../img/m-h-day.jpg') center no-repeat;
+    background-size: cover;
+    border-bottom-right-radius: 45%;
+    z-index: 1;
+
+
+    .header_heading:before{
+        @include before_bg(92px, 0, 50px, 305px)
+    }
+
+    .header_heading{
+        position: relative;
+
+        font-family: $font-family-source;
+        font-size: 72px;
+        font-weight: 700;
+
+        width: 100%;
+        max-width: 495px;
+
+        margin-top: 70px;
+        margin-bottom: 70px;
+
+        line-height: 1;
+
+    }
+
+    .header_text{
+        width: 100%;
+        max-width: 650px;
+        line-height: 1.5;
+    }
+
+    div:nth-child(4) {
+        margin-top: 65px;
+        
+        .header_button { 
+            @include buttons(18px, $white-color, $green-color, 142px, 48px);
+            margin-right: 152px;
+            font-weight: 600;
+        }
+
+        .login{
+            @include links(22px, $white-color);
+        }
+    }
+
+}
+
+.header-wrap{
+    @include view_port;
+}
+
+.landing-logo{
+
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 15px 0;
+
+    font-family: $font-family-hind;
+    font-size: 24px;
+    text-align: center;
+
+    img{
+        margin-right: 14px;
+    }
+
+    p{
+        font-weight: 600;
+        padding: 5px;
+    }
+
+    span{
+        display: flex;
+        margin: 0 10px;
+        font-size: 10px;
+    }
+
+}
+
+.section{
+    @include view_port;
+    position: relative;
+
+
+    .section_text::before{
+        @include before_bg(0, 777px, 52px, 190px)
+    }
+
+    .section_text{
+        position: relative;
+
+        margin: 40px 0;
+        font-family: $font-family-source;
+        text-align: center;
+        font-size: 42px;
+        font-weight: 600;
+
+    }
+
+    .section_card_wrap{
+        
+        .section_card{
+            display: flex;
+            margin: 25px 210px;
+            background: $background-color;
+            border-radius: 5px;
+
+            font-size: 16px;
+            color: $gray-color;
+
+            .section_card_img{
+                margin: 20px;
+                border-radius: 5px;
+                width: 35%;
+            }
+
+            .section_card_right_container{
+                margin: 50px auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                .section_card_heading{
+                    font-weight: bold;
+                    font-size: 24px;
+                    color: $white-color;
+                }
+
+                .section_card_text{
+                    line-height: 1.5;
+                    max-width: 470px;
+
+                }
+
+                .section_link{
+                    @include links(16px, $gray-color);
+                }
+
+            }
+
+        }
+
+
+    }
+
+    .section_banner{
+        position: absolute;
+        display: flex;
+        margin: 0 170px;
+        bottom: -285px;
+
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(to right, $green-color, $blue-color);
+        width: 1200px;
+        height: 150px;
+
+        border-radius: 5px;
+
+        .section_banner_text_wrap{
+            position: relative;
+            margin-left: 165px;
+            z-index: 1;
+
+            .section_banner_heading::before{
+                @include before_bg(0, 150px, 50px, 64px);
+            }
+
+            .section_banner_heading{
+                font-size: 36px;
+                font-weight: bold;
+
+            }
+
+            .section_banner_text{
+                color: $gray-color;
+            }
+        }
+
+        .section_banner_button{
+            @include buttons(18px, $white-color, $green-color, 142px, 48px);
+            margin-right: 160px;
+            font-weight: 600;
+          
+        }
+
+    }
+}
+
+
+.footer{
+    margin-top: 210px;
+    background: $background-color;
+    height: 243px;
+
+    color: $gray-color;
+
+    .footer_logo{
+
+    }
+
+    .footer_text{
+        font-size: 13px;
+        max-width: 290px;
+    }
+
+    .footer-cr{
+
+    }
+}
+
+.footer-wrap{
+    @include view_port;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 135px;
+}
