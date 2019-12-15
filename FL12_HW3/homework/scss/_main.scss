@@ -57,7 +57,7 @@ p {
     z-index: 1;
 
 
-    .header_heading{
+    &_heading{
         position: relative;
 
         font-family: $second-font-family;
@@ -77,14 +77,14 @@ p {
             }
     }
 
-    .header_text{
+    &_text{
         width: 100%;
         max-width: 650px;
         line-height: 1.5;
         white-space: pre-line;
     }
 
-    div:nth-child(4) {
+    & div:nth-child(4) {
         margin-top: 65px;
         
         .header_button { 
@@ -138,7 +138,7 @@ p {
     @extend .header-wrap;
     position: relative;
 
-    .section_text{
+    &_text{
         position: relative;
         font-family: $second-font-family;
         margin: 40px 0;
@@ -162,7 +162,7 @@ p {
             font-size: 16px;
             color: $card-text-color;
 
-            .section_card_img{
+            &_img{
                 display: block;
                 width: 100%;
                 max-width: 400px;
@@ -170,7 +170,7 @@ p {
                 border-radius: 5px;
             }
 
-            .section_card_right_container{
+            &_right_container{
                 margin: 50px auto;
                 display: flex;
                 flex-direction: column;
@@ -215,7 +215,7 @@ p {
 
         border-radius: 5px;
 
-        .section_banner_text_wrap{
+        &_text_wrap{
             position: relative;
             margin-left: 165px;
             z-index: 1;
@@ -234,7 +234,7 @@ p {
                 color: $card-text-color;
             }
         }
-        .section_banner_button{
+        &_button{
             @include buttons(18px, $button-color, $button-bg-color, 142px, 48px);
             margin-right: 160px;
             font-weight: 600;
@@ -253,7 +253,7 @@ p {
 
     color: $footer-text-color;
 
-    .footer_text{
+    &_text{
         font-size: 13px;
         max-width: 290px;
     }
