@@ -19,15 +19,6 @@ p {
   background-size: cover;
   border-bottom-right-radius: 45%;
   z-index: 1; }
-  .header .header_heading:before {
-    content: "";
-    position: absolute;
-    top: 92px;
-    left: 0;
-    background: #14a0c7;
-    height: 50px;
-    width: 305px;
-    z-index: -1; }
   .header .header_heading {
     position: relative;
     font-family: "Source Sans Pro", sans-serif;
@@ -38,6 +29,15 @@ p {
     margin-top: 70px;
     margin-bottom: 40px;
     line-height: 1; }
+    .header .header_heading:before {
+      content: "";
+      position: absolute;
+      top: 92px;
+      left: 0;
+      background: #14a0c7;
+      height: 50px;
+      width: 305px;
+      z-index: -1; }
   .header .header_text {
     width: 100%;
     max-width: 650px;
@@ -86,15 +86,6 @@ p {
 
 .section {
   position: relative; }
-  .section .section_text::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 777px;
-    background: #14a0c7;
-    height: 52px;
-    width: 190px;
-    z-index: -1; }
   .section .section_text {
     position: relative;
     font-family: "Source Sans Pro", sans-serif;
@@ -102,6 +93,15 @@ p {
     text-align: center;
     font-size: 42px;
     font-weight: 600; }
+    .section .section_text:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 777px;
+      background: #14a0c7;
+      height: 52px;
+      width: 190px;
+      z-index: -1; }
   .section .section_card_wrap .section_card {
     display: flex;
     margin: 25px 210px;
@@ -148,19 +148,19 @@ p {
       position: relative;
       margin-left: 165px;
       z-index: 1; }
-      .section .section_banner .section_banner_text_wrap .section_banner_heading::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 150px;
-        background: #14a0c7;
-        height: 50px;
-        width: 64px;
-        z-index: -1; }
       .section .section_banner .section_banner_text_wrap .section_banner_heading {
         font-size: 36px;
         font-weight: bold;
         font-family: "Source Sans Pro", sans-serif; }
+        .section .section_banner .section_banner_text_wrap .section_banner_heading:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 150px;
+          background: #14a0c7;
+          height: 50px;
+          width: 64px;
+          z-index: -1; }
       .section .section_banner .section_banner_text_wrap .section_banner_text {
         color: #c0c3ce; }
     .section .section_banner .section_banner_button {

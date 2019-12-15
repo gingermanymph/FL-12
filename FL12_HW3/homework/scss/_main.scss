@@ -57,10 +57,6 @@ p {
     z-index: 1;
 
 
-    .header_heading:before{
-        @include before_bg(92px, 0, 50px, 305px)
-    }
-
     .header_heading{
         position: relative;
 
@@ -74,6 +70,11 @@ p {
         margin-top: 70px;
         margin-bottom: 40px;
         line-height: 1;
+
+
+        &:before{
+                @include before_bg(92px, 0, 50px, 305px)
+            }
     }
 
     .header_text{
@@ -137,10 +138,6 @@ p {
     @extend .header-wrap;
     position: relative;
 
-    .section_text::before{
-        @include before_bg(0, 777px, 52px, 190px)
-    }
-
     .section_text{
         position: relative;
         font-family: $second-font-family;
@@ -148,6 +145,10 @@ p {
         text-align: center;
         font-size: 42px;
         font-weight: 600;
+
+        &:before{
+            @include before_bg(0, 777px, 52px, 190px)
+        }
     }
 
     .section_card_wrap{
@@ -218,15 +219,15 @@ p {
             position: relative;
             margin-left: 165px;
             z-index: 1;
-
-            .section_banner_heading::before{
-                @include before_bg(0, 150px, 50px, 64px);
-            }
-
+            
             .section_banner_heading{
                 font-size: 36px;
                 font-weight: bold;
                 font-family: $second-font-family;
+                
+                &:before{
+                    @include before_bg(0, 150px, 50px, 64px);
+                }
             }
 
             .section_banner_text{
