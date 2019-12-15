@@ -1,21 +1,8 @@
 // Write your styles here
 // Mixins
-
 @mixin clear{
     margin: 0;
     padding: 0;
-}
-
-@mixin view_port{
-    margin: 0 auto;
-    max-width: $main-content-size;
-    width: 100%;
-}
-
-@mixin btn_link($f-size, $color){
-    // font-family: $f-style;
-    font-size: $f-size;
-    color: $color;
 }
 
 @mixin links($f-size, $f-color){
@@ -31,7 +18,6 @@
     background: $b-color;
     width: $width;
     height: $height;
-    font-weight: 600;
 }
 
 @mixin before_bg($top, $left, $height, $width){
@@ -39,17 +25,17 @@
     position:absolute;
     top: $top;
     left: $left;
-    background: $aqua-color;
+    background: $text-bg-color;
     height: $height;
     width: $width;
     z-index: -1;
 }
 
-
-html, body {
+body {
     @include clear;
-    font-family: $font-family-hind;
-    color: $primary-text-color;
+    font-family: $main-font-family;
+    color: $body-text-color;
+    background: $body-bg-color;
 }
 
 p {
@@ -60,13 +46,12 @@ p {
 .header{
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
 
     position: relative;
     width: 100%;
     height: $header-height;
 
-    background: url('../img/m-h-day.jpg') center no-repeat;
+    background: url($header-bg-image) center no-repeat;
     background-size: cover;
     border-bottom-right-radius: 45%;
     z-index: 1;
@@ -79,7 +64,7 @@ p {
     .header_heading{
         position: relative;
 
-        font-family: $font-family-source;
+        font-family: $second-font-family;
         font-size: 72px;
         font-weight: 700;
 
@@ -87,58 +72,59 @@ p {
         max-width: 495px;
 
         margin-top: 70px;
-        margin-bottom: 70px;
-
+        margin-bottom: 40px;
         line-height: 1;
-
     }
 
     .header_text{
         width: 100%;
         max-width: 650px;
         line-height: 1.5;
+        white-space: pre-line;
     }
 
     div:nth-child(4) {
         margin-top: 65px;
         
         .header_button { 
-            @include buttons(18px, $white-color, $green-color, 142px, 48px);
+            @include buttons(18px, $button-color, $button-bg-color, 142px, 48px);
+            font-family: $second-font-family;
             margin-right: 152px;
-            font-weight: 600;
+            font-weight: map-get($map: $font-weights, $key: "medium");
         }
 
         .login{
-            @include links(22px, $white-color);
+            @include links(21px, $link-color);
+            font-family: $second-font-family;
+            font-weight: map-get($map: $font-weights, $key: "regular");
         }
     }
 
 }
 
+// Will be extended
 .header-wrap{
-    @include view_port;
+    margin: 0 auto;
+    max-width: $main-content-size;
+    width: 100%;
 }
 
 .landing-logo{
-
     display: flex;
     align-items: center;
     padding: 0;
     margin: 15px 0;
 
-    font-family: $font-family-hind;
     font-size: 24px;
     text-align: center;
 
     img{
         margin-right: 14px;
     }
-
     p{
-        font-weight: 600;
+        font-weight: map-get($map: $font-weights, $key: "medium");
         padding: 5px;
     }
-
     span{
         display: flex;
         margin: 0 10px;
@@ -148,9 +134,8 @@ p {
 }
 
 .section{
-    @include view_port;
+    @extend .header-wrap;
     position: relative;
-
 
     .section_text::before{
         @include before_bg(0, 777px, 52px, 190px)
@@ -158,30 +143,30 @@ p {
 
     .section_text{
         position: relative;
-
+        font-family: $second-font-family;
         margin: 40px 0;
-        font-family: $font-family-source;
         text-align: center;
         font-size: 42px;
         font-weight: 600;
-
     }
 
     .section_card_wrap{
-        
+
         .section_card{
             display: flex;
             margin: 25px 210px;
-            background: $background-color;
+            background: $card-bg-color;
             border-radius: 5px;
 
             font-size: 16px;
-            color: $gray-color;
+            color: $card-text-color;
 
             .section_card_img{
+                display: block;
+                width: 100%;
+                max-width: 400px;
                 margin: 20px;
                 border-radius: 5px;
-                width: 35%;
             }
 
             .section_card_right_container{
@@ -194,17 +179,18 @@ p {
                 .section_card_heading{
                     font-weight: bold;
                     font-size: 24px;
-                    color: $white-color;
+                    color: $card-heading-color;
+                    font-family: $second-font-family;
                 }
 
                 .section_card_text{
                     line-height: 1.5;
                     max-width: 470px;
-
                 }
 
                 .section_link{
-                    @include links(16px, $gray-color);
+                    @include links(16px, $card-text-color);
+                    font-family: $second-font-family;
                 }
 
             }
@@ -222,7 +208,7 @@ p {
 
         justify-content: space-between;
         align-items: center;
-        background: linear-gradient(to right, $green-color, $blue-color);
+        background: linear-gradient(to right, $button-bg-color, $gradient-color);
         width: 1200px;
         height: 150px;
 
@@ -240,18 +226,18 @@ p {
             .section_banner_heading{
                 font-size: 36px;
                 font-weight: bold;
-
+                font-family: $second-font-family;
             }
 
             .section_banner_text{
-                color: $gray-color;
+                color: $card-text-color;
             }
         }
-
         .section_banner_button{
-            @include buttons(18px, $white-color, $green-color, 142px, 48px);
+            @include buttons(18px, $button-color, $button-bg-color, 142px, 48px);
             margin-right: 160px;
             font-weight: 600;
+            font-family: $second-font-family;
           
         }
 
@@ -261,10 +247,10 @@ p {
 
 .footer{
     margin-top: 210px;
-    background: $background-color;
+    background: $footer-bg-color;
     height: 243px;
 
-    color: $gray-color;
+    color: $footer-text-color;
 
     .footer_logo{
 
@@ -276,12 +262,12 @@ p {
     }
 
     .footer-cr{
-
+        // none
     }
 }
 
 .footer-wrap{
-    @include view_port;
+    @extend .header-wrap;
     display: flex;
     justify-content: space-between;
     align-items: center;

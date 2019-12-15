@@ -1,8 +1,9 @@
-html, body {
+body {
   margin: 0;
   padding: 0;
   font-family: "Hind", sans-serif;
-  color: #2c2f3c; }
+  color: #2c2f3c;
+  background: #ffffff; }
 
 p {
   margin: 0;
@@ -11,7 +12,6 @@ p {
 .header {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   position: relative;
   width: 100%;
   height: 720px;
@@ -36,30 +36,33 @@ p {
     width: 100%;
     max-width: 495px;
     margin-top: 70px;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     line-height: 1; }
   .header .header_text {
     width: 100%;
     max-width: 650px;
-    line-height: 1.5; }
+    line-height: 1.5;
+    white-space: pre-line; }
   .header div:nth-child(4) {
     margin-top: 65px; }
     .header div:nth-child(4) .header_button {
       font-size: 18px;
-      color: #fff;
+      color: #ffffff;
       border: 0;
       border-radius: 3px;
       background: #699900;
       width: 142px;
       height: 48px;
-      font-weight: 600;
+      font-family: "Source Sans Pro", sans-serif;
       margin-right: 152px;
       font-weight: 600; }
     .header div:nth-child(4) .login {
-      font-size: 22px;
-      color: #fff; }
+      font-size: 21px;
+      color: #ffffff;
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 400; }
 
-.header-wrap {
+.header-wrap, .section, .footer-wrap {
   margin: 0 auto;
   max-width: 1540px;
   width: 100%; }
@@ -69,7 +72,6 @@ p {
   align-items: center;
   padding: 0;
   margin: 15px 0;
-  font-family: "Hind", sans-serif;
   font-size: 24px;
   text-align: center; }
   .landing-logo img {
@@ -83,9 +85,6 @@ p {
     font-size: 10px; }
 
 .section {
-  margin: 0 auto;
-  max-width: 1540px;
-  width: 100%;
   position: relative; }
   .section .section_text::before {
     content: "";
@@ -98,8 +97,8 @@ p {
     z-index: -1; }
   .section .section_text {
     position: relative;
-    margin: 40px 0;
     font-family: "Source Sans Pro", sans-serif;
+    margin: 40px 0;
     text-align: center;
     font-size: 42px;
     font-weight: 600; }
@@ -111,9 +110,11 @@ p {
     font-size: 16px;
     color: #c0c3ce; }
     .section .section_card_wrap .section_card .section_card_img {
+      display: block;
+      width: 100%;
+      max-width: 400px;
       margin: 20px;
-      border-radius: 5px;
-      width: 35%; }
+      border-radius: 5px; }
     .section .section_card_wrap .section_card .section_card_right_container {
       margin: 50px auto;
       display: flex;
@@ -123,13 +124,15 @@ p {
       .section .section_card_wrap .section_card .section_card_right_container .section_card_heading {
         font-weight: bold;
         font-size: 24px;
-        color: #fff; }
+        color: #ffffff;
+        font-family: "Source Sans Pro", sans-serif; }
       .section .section_card_wrap .section_card .section_card_right_container .section_card_text {
         line-height: 1.5;
         max-width: 470px; }
       .section .section_card_wrap .section_card .section_card_right_container .section_link {
         font-size: 16px;
-        color: #c0c3ce; }
+        color: #c0c3ce;
+        font-family: "Source Sans Pro", sans-serif; }
   .section .section_banner {
     position: absolute;
     display: flex;
@@ -156,20 +159,21 @@ p {
         z-index: -1; }
       .section .section_banner .section_banner_text_wrap .section_banner_heading {
         font-size: 36px;
-        font-weight: bold; }
+        font-weight: bold;
+        font-family: "Source Sans Pro", sans-serif; }
       .section .section_banner .section_banner_text_wrap .section_banner_text {
         color: #c0c3ce; }
     .section .section_banner .section_banner_button {
       font-size: 18px;
-      color: #fff;
+      color: #ffffff;
       border: 0;
       border-radius: 3px;
       background: #699900;
       width: 142px;
       height: 48px;
-      font-weight: 600;
       margin-right: 160px;
-      font-weight: 600; }
+      font-weight: 600;
+      font-family: "Source Sans Pro", sans-serif; }
 
 .footer {
   margin-top: 210px;
@@ -181,9 +185,6 @@ p {
     max-width: 290px; }
 
 .footer-wrap {
-  margin: 0 auto;
-  max-width: 1540px;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;

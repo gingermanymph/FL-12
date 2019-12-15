@@ -1,0 +1,33 @@
+// Fonts family
+$main-font-family: 'Fresca', sans-serif;
+$second-font-family: 'Source Sans Pro', sans-serif;
+
+// Fonts size
+$font-weights:("regular": 400, "medium": 600, "bold": 700);
+
+//Bg image
+$header-bg-image: '../img/m-h-night.jpg';
+
+// Content size
+$main-content-size: 1540px;
+$header-height:720px;
+
+//Colors
+$white: #ffffff;
+$darkgray: #3b3f50;
+$lightgray: #d1d1d1;
+
+$body-bg-color: #21232e;
+$body-text-color: $white;
+
+$button-color: $white;
+$link-color:$white;
+
+$card-bg-color: $darkgray;
+$card-text-color: $lightgray;
+$card-heading-color: $white;
+$footer-bg-color: $darkgray;
+$footer-text-color: $lightgray;
+$button-bg-color: #e3ac00;
+$text-bg-color: #ff4e33;
+$gradient-color: #932d52;

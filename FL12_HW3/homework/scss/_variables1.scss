@@ -1,35 +1,33 @@
 // Fonts family
-
-$font-family-source: 'Source Sans Pro', sans-serif;
-$font-family-hind: 'Hind', sans-serif;
-$font-family-fresna: 'Fresca', sans-serif;
-
+$main-font-family: 'Hind', sans-serif;
+$second-font-family: 'Source Sans Pro', sans-serif;
 
 // Fonts size
+$font-weights:("regular": 400, "medium": 600, "bold": 700);
 
-
-$primary-seize: 16px;
-
-$header-heading-size: 54px;
-$header-text-size: 16px;
-
-$section-heading-size: 32px;
-
+//Bg image
+$header-bg-image: '../img/m-h-day.jpg';
 
 // Content size
 $main-content-size: 1540px;
 $header-height:720px;
 
+//Colors
+$white: #ffffff;
+$darkgray: #21232e;
+$lightgray: #c0c3ce;
 
+$body-bg-color: $white;
+$body-text-color: #2c2f3c;
 
-// Colors
-$primary-text-color: #2c2f3c; 
+$button-color: $white;
+$link-color:$white;
 
-$gray-color: #c0c3ce;
-$green-color: #699900;
-$blue-color: #2d5bd7;
-$aqua-color: #14a0c7;
-$white-color: #fff;
-
-
-$background-color: #21232e;
+$card-bg-color: $darkgray;
+$card-text-color: $lightgray;
+$card-heading-color: $white;
+$footer-bg-color: $darkgray;
+$footer-text-color: $lightgray;
+$button-bg-color: #699900;
+$text-bg-color: #14a0c7;
+$gradient-color: #2d5bd7;
