@@ -163,7 +163,9 @@ article:last-child ::after {
     border-radius: 45px;
 }
 
-.detail__text{
+.detail__username,
+.detail__date,
+.detail__comments {
     margin: 15px;
     position: relative;
 }
