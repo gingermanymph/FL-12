@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-size: 15px;
     line-height: 1.6;
-    color: #555555;
+    color: #777777;
 }
 
 *, *:before, *:after {
@@ -37,7 +37,6 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-
     text-align: center;
 }
 
@@ -46,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
 }
 
-.hero_subtile{
+.hero_subtile {
     font-size: 24px;
     font-weight: normal;
     color: #bfba55;
@@ -85,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: top;
     margin: 25px;
     text-decoration: none;
-    color: #555555;
+    color: #777777;
     transition: color .2s linear;
 }
 
@@ -94,7 +93,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Button */
-.btn{
+
+.btn {
     display: inline-block;
     vertical-align: top;
     padding: 10px 15px;
@@ -104,66 +104,61 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     text-decoration: none;
     background: #fff;
-    color: #555;
-
+    color: #777777;
     cursor: pointer;
 }
 
 /* Article */
 
-.article{
+.article {
     margin: 105px auto;
     padding: 0 10px;
     display: flex;
     flex-direction: column;
-
     width: 100%;
     max-width: 950px;
 }
 
-.article:after{
+.article:after {
     content: "";
     border-top: 1px solid;
     width: 100%;
-    border-color: #f0f0f0;
-    margin-top: 10px;
+    border-color: #777777;
+    margin-top: 15px;
 }
 
 article:last-child:after {
     display: none;
 }
 
-
-.article__picture{
+.article__picture {
     height: 635px;
     margin-bottom: 45px;
 }
 
-.article__header{
+.article__header {
     color: #000;
 }
 
-.article__detail{
+.article__detail {
     margin: 5px 0;
     display: flex;
     align-items: center;
 }
 
-.detail__img{
+.detail__img {
     margin: 0;
     height: 45px;
     width: 45px;
     border-radius: 45px;
 }
 
-.detail__username,
-.detail__date,
-.detail__comments {
+.detail__username, .detail__date, .detail__comments {
     margin: 15px;
     position: relative;
 }
 
-.article__button{
+.article__button {
     border-radius: 45px;
     font-size: 12px;
     font-weight: bold;
@@ -172,27 +167,28 @@ article:last-child:after {
     cursor: pointer;
     width: 190px;
     height: 50px;
-    border-color: #ccc;
+    border-color: #777777;
     border: 1px solid;
     margin: 20px 0;
 }
 
 /* Footer */
-.footer{
+
+.footer {
     display: flex;
     width: 100%;
     background: #000;
 }
 
-.footer.container{
+.footer.container {
     padding: 45px;
 }
 
-.footer__inner{
+.footer__inner {
     max-width: 430px;
     margin-right: 150px;
 }
 
-.footer__heading{
+.footer__heading {
     color: #fff;
 }
