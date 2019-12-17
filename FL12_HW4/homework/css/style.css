@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 .header__logo {
     font-size: 30px;
     font-weight: 700;
-    /* color: ; */
+    padding: 10px;
 }
 
 /* Nav */
@@ -105,22 +105,15 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     background: #fff;
     color: #555;
-    
-    transition: background .2s linear,
-    color .2s linear;
+
     cursor: pointer;
 }
-
-.btn:hover{
-    background-color: #555;
-    color: #fff;
-}
-
 
 /* Article */
 
 .article{
-    margin: 115px auto;
+    margin: 105px auto;
+    padding: 0 10px;
     display: flex;
     flex-direction: column;
 
@@ -176,18 +169,12 @@ article:last-child:after {
     font-weight: bold;
     background: #fff;
     color: #777777;
-    transition: background .2s linear, color .2s linear;
     cursor: pointer;
     width: 190px;
     height: 50px;
     border-color: #ccc;
     border: 1px solid;
     margin: 20px 0;
-}
-
-.article__button:hover{
-    background-color: #777777;
-    color: #fff;
 }
 
 /* Footer */
@@ -208,8 +195,4 @@ article:last-child:after {
 
 .footer__heading{
     color: #fff;
-}
-
-.footer__text{
-    /* padding: 30px 0; */
 }
