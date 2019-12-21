@@ -132,7 +132,7 @@ ul {
 }
 
 .content-description {
-  font-size: 12px;
+  /* font-size: 12px; */
   font-weight: 300;
   width: 70%;
   line-height: 1.6;
@@ -164,8 +164,6 @@ ul {
   background: #9d27b0;
 }
 
-.posts-list-item:nth-child(1)::after {}
-
 .posts-list-item:nth-child(2) {
   background: #9bb800;
 }
@@ -195,9 +193,9 @@ ul {
   margin: 10px 0 10px 10px;
 }
 
-.posts-list-item:last-child .item-img {
+/* .posts-list-item:last-child .item-img {
   display: none;
-}
+} */
 
 .item-img {
   flex: 1;
@@ -226,19 +224,19 @@ ul {
 
 .post-title {
   margin-bottom: 15px;
-  font-size: 28px;
+  /* font-size: 28px; */
   font-weight: 300;
 }
 
 .post-description {
-  font-size: 10px;
+  /* font-size: 10px; */
   font-weight: 300;
   line-height: 1.5;
 }
 
 .post-date {
   margin: 10px 10px 10px 0;
-  font-size: 20px;
+  /* font-size: 20px; */
   font-weight: 100;
   opacity: 50%;
 }
@@ -267,12 +265,12 @@ ul {
 }
 
 .news-title {
-  font-size: 20px;
+  /* font-size: 20px; */
   font-weight: 300;
 }
 
 .news-description {
-  font-size: 10px;
+  /* font-size: 10px; */
   font-weight: 300;
   line-height: 1.5;
   margin: 10px 0;
@@ -287,7 +285,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   background-color: #024161;
-  font-size: 10px;
+  /* font-size: 10px; */
   font-weight: 200;
   line-height: 1.5;
 }
@@ -299,16 +297,157 @@ ul {
 /* Desktop */
 
 @media (min-width: 1400px) {
+  body {
+    font-size: 16px;
+  }
   .wrapper {
-    /* min-width: 768px;
-    max-width: 80%; */
+    margin: 0 auto;
+    max-width: 90%;
+  }
+  .header-logo {
+    font-size: 45px;
+  }
+  .header-logo::after {
+    font-size: 45px;
+    font-weight: 300;
+  }
+  .nav-list li {
+    padding: 25px;
+  }
+  .header-post {
+    margin: 20px auto;
+  }
+  .content-title {
+    font-size: 45px;
+  }
+  .post-content {
+    padding: 20px;
+  }
+  .post-title {
+    font-size: 46px;
+  }
+  .post-date {
+    font-size: 34px;
+  }
+  .post-details {
+    margin: 25px 0 25px 25px;
+  }
+  .posts-list-item:nth-child(even) .item-post .post-details {
+    margin: 25px 25px 25px 0;
+  }
+  .news-title {
+    font-size: 32px;
+  }
+  .news-content {
+    padding: 35px;
+    margin-bottom: 25px;
+  }
+  .footer {
+    padding: 25px 25px 20px 25px;
+    line-height: 1.6;
+    margin-top: 25px;
+  }
+  .footer-author p {
+    max-width: 150px;
   }
 }
 
 /* Tablet */
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .wrapper {
+    max-width: 100%;
+    padding: 8px;
+  }
+  .header {
+    padding: 25px;
+    flex-direction: column;
+  }
+  .header-logo {
+    margin: 25px;
+    order: 2;
+  }
+  .header-nav {
+    order: 1;
+  }
+  .nav-list {
+    display: block;
+  }
+  .nav-list-item {
+    opacity: .7;
+    list-style-position: inside;
+    border-top: 1px solid #fff;
+  }
+  .nav-list-item:first-child {
+    border-top: 2px solid #fff;
+  }
+  .nav-list-item:last-child {
+    display: none;
+  }
+  .nav-list li {
+    padding: 5px 10px 0px 10px;
+  }
+  .nav-list li a {
+    display: none;
+  }
+  .content-title {
+    font-size: 42px;
+    font-weight: 100;
+  }
+  .post-content {
+    padding: 25px 25px 0 25px;
+  }
+  .content-description {
+    font-weight: 300;
+    width: 90%;
+  }
+  .posts-list-item {
+    flex-direction: column;
+  }
+  .post-details {
+    margin: 32px 0 32px 32px;
+  }
+  .post-title {
+    font-size: 45px;
+  }
+  .post-date {
+    margin: 19px 10px 19px 0;
+    font-size: 32px;
+  }
+  .posts-list-item:nth-child(even) {
+    flex-direction: column;
+    text-align: left;
+  }
+  .posts-list-item:nth-child(even) .item-post {
+    flex-direction: row;
+    text-align: left;
+  }
+  .posts-list-item:nth-child(even) .item-post .post-details {
+    margin: 32px 0 32px 32px;
+  }
+  .posts-list-item:nth-child(even) .item-post .post-date {
+    margin: 19px 10px 19px 0;
+    font-size: 32px;
+  }
+  .posts-list-item:last-child .item-post {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-author p {
+    max-width: 150px;
+  }
+}
 
 /* Mobile phone */
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+  
+}
