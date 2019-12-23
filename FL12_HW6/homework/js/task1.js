@@ -1,12 +1,12 @@
 const two = 2;
 const four = 4;
 
-let a = parseInt(prompt('Enter number a')) || 0;
-let b = parseInt(prompt('Enter number b')) || 0;
-let c = parseInt(prompt('Enter number c')) || 0;
+let a = parseInt(prompt('Enter number a'));
+let b = parseInt(prompt('Enter number b'));
+let c = parseInt(prompt('Enter number c'));
 let x, x1, x2, discriminant;
 
-if (a !== 0 || b !== 0 || c !== 0) {
+if ((a !== 0 || b !== 0 || c !== 0) && !isNaN(a + b + c)) {
     discriminant = Math.pow(b, two) - four * a * c;
     if (discriminant > 0) {
         x1 = (-b + Math.sqrt(discriminant)) / (two * a);
