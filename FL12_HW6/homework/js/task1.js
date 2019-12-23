@@ -1,4 +1,3 @@
-// Your code goes here
 const two = 2;
 const four = 4;
 

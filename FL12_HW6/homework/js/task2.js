@@ -1,4 +1,3 @@
-// Your code goes here
 let headA = parseInt(prompt('Enter head A'));
 let headB = parseInt(prompt('Enter head B'));
 let headC = parseInt(prompt('Enter head C'));
@@ -10,10 +9,10 @@ if (!isNaN(headA) || !isNaN(headB) || !isNaN(headC)) {
         sideBC = headB + headC;
         sideCA = headC + headA;
 
-        if (sideAB > headC || sideBC > headA || sideCA > headB) {
-            if (sideAB === sideBC && sideBC === sideCA) {
+        if (sideAB > headC && sideBC > headA && sideCA > headB) {
+            if (sideAB === sideBC && sideBC === sideCA && sideCA === sideAB) {
                 console.log('Equilateral triangle')
-            } else if (sideAB !== sideBC && sideBC !== sideCA) {
+            } else if (sideAB !== sideBC && sideBC !== sideCA && sideCA !== sideAB) {
                 console.log('Scalene triangle')
             } else {
                 console.log('Isosceles triangle')
