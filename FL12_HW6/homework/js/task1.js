@@ -2,27 +2,23 @@
 const two = 2;
 const four = 4;
 
-let a = parseInt(prompt('Enter number a'));
-let b = parseInt(prompt('Enter number b'));
-let c = parseInt(prompt('Enter number c'));
+let a = parseInt(prompt('Enter number a')) || 0;
+let b = parseInt(prompt('Enter number b')) || 0;
+let c = parseInt(prompt('Enter number c')) || 0;
 let x, x1, x2, discriminant;
 
-if (!isNaN(a) || !isNaN(b) || !isNaN(c)) {
-    if (a !== 0 || b !== 0 || c !== 0) {
-        discriminant = Math.pow(b, two) - four * a * c;
-        if (discriminant > 0) {
-            x1 = (-b + Math.sqrt(discriminant)) / (two * a);
-            x2 = (-b - Math.sqrt(discriminant)) / (two * a);
-            console.log(`Discriminant = ${Math.sqrt(discriminant)}`);
-            console.log(`x1 = ${x1}; x2 = ${x2}`)
-        } else if( discriminant === 0) {
-            x = -b / (two * a);
-            console.log(`x = ${x}`)
-        }else{       
-            console.log('No solution')
-        } 
+if (a !== 0 || b !== 0 || c !== 0) {
+    discriminant = Math.pow(b, two) - four * a * c;
+    if (discriminant > 0) {
+        x1 = (-b + Math.sqrt(discriminant)) / (two * a);
+        x2 = (-b - Math.sqrt(discriminant)) / (two * a);
+        console.log(`Discriminant = ${Math.sqrt(discriminant)}`);
+        console.log(`x1 = ${x1}; x2 = ${x2}`)
+    } else if (discriminant === 0) {
+        x = -b / (two * a);
+        console.log(`x = ${x}`)
     } else {
-        console.log('Invalid input data');
+        console.log('No solution')
     }
 } else {
     console.log('Invalid input data');
