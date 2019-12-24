@@ -4,7 +4,7 @@ let headC = parseInt(prompt('Enter head C'));
 let sideAB, sideBC, sideCA;
 
 if (!isNaN(headA + headB + headC) ) {
-    if (headA > 0 || headB > 0 || headC > 0) {
+    if (headA > 0 && headB > 0 && headC > 0) {
         sideAB = headA + headB;
         sideBC = headB + headC;
         sideCA = headC + headA;
