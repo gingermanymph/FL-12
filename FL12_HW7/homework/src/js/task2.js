@@ -33,7 +33,7 @@ while (game) {
         Chose a roulette pocket number from 0 to ${currentRange}
         Attempts left: ${userAttempt}
         Total prize: ${userPrize}
-        Possible prize on current attempt: ${prizes[userAttempt]}`, pocket);
+        Possible prize on current attempt: ${prizes[userAttempt]}`, '');
 
         if (userAnswer !== pocket) {
             userAttempt--;
