@@ -1,5 +1,5 @@
 const countNumbers = (str) => {
-    let arr = Array.from(str).sort();
+    let arr = str ? Array.from(str).sort() : [];
     const obj = {};
     arr.forEach(a => {
         if(!isNaN(a)){
