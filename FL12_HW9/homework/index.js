@@ -7,7 +7,7 @@ const convert = (...args) => {
             args[index] = String(args[index]);
         }
     }
-    return [...args];
+    return args;
 }
 
 // task #2
@@ -20,9 +20,7 @@ const executeforEach = (arr, fn) => {
 // task #3
 const mapArray = (arr, fn) => {
     let result = [];
-    executeforEach(arr, el =>
-        result.push(fn(Number(el)))
-    );
+    executeforEach(arr, el => result.push(fn(Number(el))));
     return result;
 }
 
@@ -63,9 +61,7 @@ const actors = [
 
 const getArrayOfKeys = (arr, key) => {
     let result = [];
-    executeforEach(arr, el => {
-        result.push(el[key]);
-    });
+    executeforEach(arr, el => result.push(el[key]));
     return result;
 }
 
