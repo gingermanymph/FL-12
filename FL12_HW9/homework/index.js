@@ -1,3 +1,17 @@
+const TWO = 2;
+const THREE = 3;
+const FIVE = 5;
+const SEVEN = 7;
+const EIGHT = 8;
+const TEN = 10;
+const FOURTEEN = 14;
+const TWENTYNINE = 29;
+const THIRTY = 30;
+const THIRTYONE = 31; 
+const FOURTYEIGHT = 48;
+const FIFTYEIGHT = 59;
+const TWO_K_19 = 2019;
+
 // task #1
 const convert = (...args) => {
     for (const index in args) {
@@ -66,10 +80,10 @@ const getArrayOfKeys = (arr, key) => {
 }
 
 // task #8
-const substitute = arr => mapArray(arr, el => el < 30 ? '*' : el);
+const substitute = arr => mapArray(arr, el => el < THIRTY ? '*' : el);
 
 // task #9
-const date = new Date(2019, 0, 2);
+const date = new Date(TWO_K_19, 0, TWO);
 const getPastDay = (date, number) => {
     const MS_IN_DAY = 86400000;
     date = date.getTime() - MS_IN_DAY * number;
@@ -78,24 +92,31 @@ const getPastDay = (date, number) => {
 
 // task #10
 const formatDate = date => {
-    return `${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()} ${date.getHours()}:${date.getMinutes()}`
+    const zero = n => n < TEN ? '0' + n : n;
+    const YEAR = date.getFullYear();
+    const MONTH = date.getMonth() + 1;
+    const DAY = date.getDate();
+    const HOURS = zero(date.getHours());
+    const MINUTES = zero(date.getMinutes());
+    
+    return `${YEAR}/${MONTH}/${DAY}\u0020${HOURS}:${MINUTES}`;
 }
 // Calls
-console.log(convert('1', 2, 3, '4'));
- // [1, '2', '3', 4]
-console.log(executeforEach([1, 2, 3], el => console.log(el * 2)));
+console.log(convert('1', TWO, THREE, '4'));
+// [1, '2', '3', 4]
+console.log(executeforEach([1, TWO, THREE], el => console.log(el * TWO)));
 // logs 2 4 6
-console.log(mapArray([2, '5', 8], el => el + 3));
+console.log(mapArray([TWO, '5', EIGHT], el => el + THREE));
 // returns [5, 8, 11]
-console.log(filterArray([2, 5, 8], el => el % 2 === 0));
+console.log(filterArray([TWO, FIVE, EIGHT], el => el % TWO === 0));
 // returns [2, 8]
 console.log(flipOver('hey world'));
 // 'dlrow yeh'
-console.log(makeListFromRange([2, 7]));
+console.log(makeListFromRange([TWO, SEVEN]));
 // [2, 3, 4, 5, 6, 7]
 console.log(getArrayOfKeys(actors, 'name'));
 // ['tommy', 'lee']
-console.log(substitute([58, 14, 48, 2, 31, 29]));
+console.log(substitute([FIFTYEIGHT, FOURTEEN, FOURTYEIGHT, TWO, THIRTYONE, TWENTYNINE]));
 // [58, '*', 48, '*', 31, '*']
 console.log(getPastDay(date, 1));
 // 1, (1 Jan 2019)
