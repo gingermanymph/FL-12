@@ -16,9 +16,9 @@ function Fighter(stats) {
 
     this.attack = enemy => {
         const MAX_CHANCE = 100;
-        const attackChance = MAX_CHANCE - (enemy.getAgility() + enemy.getStrength());
+        const ATTACK_CHANCE = MAX_CHANCE - (enemy.getAgility() + enemy.getStrength());
 
-        const isSuccessAttack = (chance) => {
+        const isSuccessAttack = chance => {
             const MAX_LENGTH = 99;
             const array = [];
             for (let i = 0; i <= MAX_LENGTH; i++) {
@@ -33,7 +33,7 @@ function Fighter(stats) {
             return array[Math.floor(Math.random() * (MAX_CHANCE - 1) + 1) - 1];
         }
 
-        if (isSuccessAttack(attackChance)) {
+        if (isSuccessAttack(ATTACK_CHANCE)) {
             enemy.dealDamage(this.getDamage());
             console.log(`${this.getName()} makes ${this.getDamage()} damage to ${enemy.getName()}!`)
         } else {
@@ -70,7 +70,7 @@ function battle(player1, player2) {
 
     let fighting = true;
     const whoCanAttack = () => Math.floor(Math.random() * (1 + 1));
-    const won = (player1, player2) => {
+    const winner = (player1, player2) => {
         player1.addWin();
         player2.addLoss();
         console.log(`${player1.getName()} has won!`);
@@ -83,14 +83,14 @@ function battle(player1, player2) {
                 if (!isDead(player2)) {
                     player1.attack(player2);
                 } else {
-                    won(player1, player2);
+                    winner(player1, player2);
                 }
                 break;
             case 1:
                 if (!isDead(player1)) {
                     player2.attack(player1);
                 } else {
-                    won(player2, player1);
+                    winner(player2, player1);
                 }
                 break;
             default: break;
