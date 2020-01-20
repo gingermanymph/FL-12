@@ -41,7 +41,7 @@ function Fighter(stats) {
         }
     };
 
-    this.logCombatHistory = () => console.log(`Name: ${this.getName} Wins: ${wins} Losess: ${losess}`);
+    this.logCombatHistory = () => console.log(`Name: ${this.getName()} Wins: ${wins} Losess: ${losess}`);
 
     this.heal = amount => {
         health += amount;
